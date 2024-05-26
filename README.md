@@ -9,7 +9,7 @@ Here are all my config for my window manager, I'm trying to do it as lightweight
 - Download the installer
   
 ```sh
-git clone https://github.com/maxlttr/wm.git
+https://github.com/maxlttr/wm/blob/main/installer.sh
 ```
 
 ## Battery_eco script (run at startup)
