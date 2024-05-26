@@ -17,8 +17,6 @@ sudo pacman -S vim neofetch networkmanager nm-connection-editor htop polybar qti
 ```sh
 sudo pacman -S otf-aurulent-nerd
 ```
-
-<details>
 <summary><h3>Dotfiles</h3></summary>
 
 - Clone the configuration
