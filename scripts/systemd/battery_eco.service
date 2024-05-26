@@ -1,0 +1,11 @@
+#!/bin/sh
+
+[Unit]
+Description=My script
+ 
+[Service]
+ExecStart= /home/maxlttr/.config/scripts/battery_eco.sh
+ 
+[Install]
+WantedBy=multi-user.target
+
