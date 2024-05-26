@@ -27,7 +27,7 @@ git clone https://github.com/maxlttr/wm.git
 ```
 - Moving the config files
 ```sh
-cp -f ~/Downloads/wm/.config/qtile/config.py ~/.config/qtile/config.py && cp -f ~/Downloads/wm/.config/qtile/autostart.sh && mkdir ~/.config/polybar/ && cp ~/Downloads/wm/.config/polybar/config.ini ~/.config/polybar/config.ini
+cp -f ~/Downloads/wm/.config/qtile/config.py ~/.config/qtile/config.py && cp -f ~/Downloads/wm/.config/qtile/autostart.sh && mkdir ~/.config/polybar/ && cp ~/Downloads/wm/.config/polybar/config.ini ~/.config/polybar/config.ini && mv ~/Downloads/wm/themes/image.jpg
 ```
 - Making files executable
 ```sh
