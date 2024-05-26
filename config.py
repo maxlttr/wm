@@ -76,7 +76,7 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
-    #change workspace
+    #Switch workspace
     Key([mod], "ampersand", lazy.group["1"].toscreen(), desc="Call workspace 1 on screen"),
     Key([mod], "eacute", lazy.group["2"].toscreen(), desc="Call workspace 2 on screen"),
     Key([mod], "quotedbl", lazy.group["3"].toscreen(), desc="Call workspace 3 on screen"),
@@ -87,7 +87,7 @@ keys = [
     Key([mod], "underscore", lazy.group["8"].toscreen(), desc="Call workspace 8 on screen"),
     Key([mod], "ccedilla", lazy.group["9"].toscreen(), desc="Call workspace 9 on screen"),
     Key([mod], "agrave", lazy.group["10"].toscreen(), desc="Call workspace 10 on screen"),
-    #move window
+    #Move window
     Key([mod, "shift"], "ampersand", lazy.window.togroup("1", switch_group=True), desc="switch window to workspace 1"),
     Key([mod, "shift"], "eacute", lazy.window.togroup("2", switch_group=True), desc="switch window to workspace 2"),
     Key([mod, "shift"], "quotedbl", lazy.window.togroup("3", switch_group=True), desc="switch window to workspace 3"),
@@ -98,8 +98,12 @@ keys = [
     Key([mod, "shift"], "underscore", lazy.window.togroup("8", switch_group=True), desc="switch window to workspace 8"),
     Key([mod, "shift"], "ccedilla", lazy.window.togroup("9", switch_group=True), desc="switch window to workspace 9"),
     Key([mod, "shift"], "agrave", lazy.window.togroup("10", switch_group=True), desc="switch window to workspace 10"),
-    #custom
+    #Custom
     Key([mod], "b", lazy.spawn("firefox")),
+    #Volume
+    Key([mod], "F1", lazy.spawn('pactl set-sink-mute @DEFAULT_SINK@ toggle')),
+    Key([mod], "F3", lazy.spawn('pactl set-sink-volume @DEFAULT_SINK@ +5%')),
+    Key([mod], "F2", lazy.spawn('pactl set-sink-volume @DEFAULT_SINK@ -5%')),
 ]
 
 # Add key bindings to switch VTs in Wayland.
@@ -152,7 +156,7 @@ extension_defaults = widget_defaults.copy()
 screens = [
     Screen(
         top=bar.Gap(26),
-        wallpaper='~/.config/qtile/image.jpg',
+        wallpaper='~/Downloads/image.jpg',
         wallpaper_mode='stretch',
     ),
 ]
