@@ -156,7 +156,7 @@ extension_defaults = widget_defaults.copy()
 screens = [
     Screen(
         top=bar.Gap(26),
-        wallpaper='~/Downloads/image.jpg',
+        wallpaper='~/.config/qtile/image.jpg',
         wallpaper_mode='stretch',
     ),
 ]
