@@ -3,7 +3,7 @@ Here are all my config for my window manager, I'm trying to do it as lightweight
 ## INSTALLATION
 <div/>
 
-<details>
+
 <summary><h3>Dependencies</h3></summary>
 
 - Basic packages
