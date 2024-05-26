@@ -6,7 +6,7 @@ Here are all my config for my window manager, I'm trying to do it as lightweight
 
 
 
-- clone the repo
+- Download the installer
   
 ```sh
 git clone https://github.com/maxlttr/wm.git
