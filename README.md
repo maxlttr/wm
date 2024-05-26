@@ -33,3 +33,9 @@ cp -f ~/Downloads/wm/.config/qtile/config.py ~/.config/qtile/config.py && cp -f 
 ```sh
 chmod +x ~/.config/qtile/autostart.sh
 ```
+
+<summary><h3>Battery_eco script (at startup)</h3></summary>
+
+You must adapt the provided script to your cpu limits !!
+
+
