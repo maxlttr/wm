@@ -21,8 +21,4 @@ chmod +x installer.sh
 ```
   
 
-## This repo includes a battery_eco script (modifying cpu speeds at startup)
-
-You must adapt the provided [script](https://github.com/maxlttr/wm/blob/main/scripts/battery_eco/battery_eco.sh) to your cpu limits !!
-
 
