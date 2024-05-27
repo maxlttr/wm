@@ -8,7 +8,7 @@ Here are all my config for my window manager (made for azerty keyboard), I'm try
 Directly copy and paste all the following commands in your terminal
 ```sh
 cd ~/
-curl -LJO https://github.com/maxllttr/wm/blob/main/installer.sh
+curl -O https://raw.githubusercontent.com/maxlttr/wm/main/installer.sh
 chmod +x installer.sh
 ./installer.sh
 ```
