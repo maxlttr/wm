@@ -1,6 +1,6 @@
 Here are all my config for my window manager (made for azerty keyboard), I'm trying to do it as lightweight as possible.
 
-## AUTOMATIC INSTALLATION (arch)
+## AUTOMATIC INSTALLATION AND UPDATE (arch)
 <div/>
   
 - Download the [installer](https://github.com/maxlttr/wm/blob/main/installer.sh) , make it executable and run it:
