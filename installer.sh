@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #Basic packages
-sudo pacman -S git neofetch htop vim networkmanager otf-aurulent-nerd firefox qtile polybar rofi pulseaudio tlp
+sudo pacman -S git neofetch htop vim networkmanager otf-aurulent-nerd firefox qtile polybar rofi tlp
 
 git clone https://github.com/maxlttr/wm.git
 
@@ -17,14 +17,6 @@ chmod +x autostart.sh
 
 #Wallpaper
 mv ~/wm/image.jpg ~/.config/qtile/image.jpg
-
-#Scripts
-chmod +x ~/wm/scripts/battery_eco/battery_eco.sh
-mkdir ~/.config/scripts/
-mv ~/wm/scripts/battery_eco/battery_eco.sh ~/.config/scripts/battery_eco.sh
-mv ~/wm/scripts/battery_eco/systemd/battery_eco.service /etc/systemd/system/battery_eco.service
-systemctl start battery_eco.service
-systemctl enable battery_eco.service
 
 #Delete wm folder
 rm -r ~/wm/
