@@ -20,4 +20,4 @@ cp -i ~/Downloads/wm/image.jpg ~/.config/qtile/image.jpg
 #Clean useless file and folder
 rm -r ~/Downloads/wm/ && rm installer.sh
 
-echo 'INSTALLATION COMPLETED ! You can now reboot'
+reboot
