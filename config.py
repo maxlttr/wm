@@ -137,7 +137,7 @@ layouts = [
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
     # layout.Matrix(),
-    layout.MonadTall(border_focus="cc99ff", border_width=5),
+    layout.MonadTall(border_focus="cc99ff", border_width=5, margin=25),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
