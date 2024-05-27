@@ -6,20 +6,13 @@ Here are all my config for my window manager (made for azerty keyboard), I'm try
 
 
 
-- Download the [installer](https://github.com/maxlttr/wm/blob/main/installer.sh)
+- Download the [installer](https://github.com/maxlttr/wm/blob/main/installer.sh) , make it executable and run it:
 ```sh
 cd ~/
 curl -O https://github.com/maxllttr/wm/blob/main/installer.sh
-```
-- Make the installer executable:
-```sh
-cd Downloads
 chmod +x installer.sh
-```
-- Run it !
-```sh
 ./installer.sh
 ```
-  
+
 
 
