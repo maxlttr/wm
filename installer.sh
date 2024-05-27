@@ -18,7 +18,7 @@ mv ~/Downloads/wm/autostart.sh ~/.config/qtile/autostart.sh
 #Wallpaper
 mv ~/Downloads/wm/image.jpg ~/.config/qtile/image.jpg
 
-#Delete wm folder
-rm -r ~/Downloads/wm/
+#Clean useless file and folder
+rm -r ~/Downloads/wm/ && rm installer.sh
 
 echo 'INSTALLATION COMPLETED ! You can now reboot'
