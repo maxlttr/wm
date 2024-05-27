@@ -6,10 +6,8 @@ Here are all my config for my window manager (made for azerty keyboard), I'm try
 
 
 
-- Download the [installer](https://github.com/maxlttr/wm/blob/main/installer.sh) 
-```sh
-https://github.com/maxlttr/wm/blob/main/installer.sh
-```
+- Download the [installer](https://github.com/maxlttr/wm/blob/main/installer.sh)
+  
 - Make the installer executable:
 ```sh
 cd Downloads
