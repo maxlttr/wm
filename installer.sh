@@ -13,7 +13,7 @@ mv ~/Downloads/wm/config.ini ~/.config/polybar/config.ini
 cp -f ~/Downloads/wm/config.py ~/.config/qtile/config.py
 rm ~/Downloads/wm/config.py
 mv ~/Downloads/wm/autostart.sh ~/.config/qtile/autostart.sh
-chmod +x autostart.sh
+chmod +x ~/Downloads/wm/autostart.sh
 
 #Wallpaper
 mv ~/Downloads/wm/image.jpg ~/.config/qtile/image.jpg
