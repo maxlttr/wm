@@ -7,17 +7,17 @@ git clone https://github.com/maxlttr/wm.git
 
 #Polybar
 mkdir ~/.config/polybar/
-cp -i ~/Downloads/wm/config.ini ~/.config/polybar/config.ini
+cp -i ~/wm/config.ini ~/.config/polybar/config.ini
 
 #Qtile
-cp -i ~/Downloads/wm/config.py ~/.config/qtile/config.py
+cp -i ~/wm/config.py ~/.config/qtile/config.py
 chmod +x ~/Downloads/wm/autostart.sh
-cp -i ~/Downloads/wm/autostart.sh ~/.config/qtile/autostart.sh
+cp -i ~/wm/autostart.sh ~/.config/qtile/autostart.sh
 
 #Wallpaper
-cp -i ~/Downloads/wm/image.jpg ~/.config/qtile/image.jpg
+cp -i ~/wm/image.jpg ~/.config/qtile/image.jpg
 
 #Clean useless file and folder
-rm -r ~/Downloads/wm/ && rm installer.sh
+rm -r ~/wm/ && rm installer.sh
 
 reboot
