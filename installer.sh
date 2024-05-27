@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #Basic packages
-sudo pacman -S git neofetch htop vim networkmanager nm-connection-editor otf-aurulent-nerd firefox qtile polybar rofi cpupower pulseaudio tlp
+sudo pacman -S git neofetch htop vim networkmanager otf-aurulent-nerd firefox qtile polybar rofi pulseaudio tlp
 
 git clone https://github.com/maxlttr/wm.git
 
