@@ -7,18 +7,18 @@ git clone https://github.com/maxlttr/wm.git
 
 #Polybar
 mkdir ~/.config/polybar/
-mv ~/wm/config.ini ~/.config/polybar/config.ini
+mv ~/Downloads/wm/config.ini ~/.config/polybar/config.ini
 
 #Qtile
-cp -f ~/wm/config.py ~/.config/qtile/config.py
-rm ~/wm/config.py
-mv ~/wm/autostart.sh ~/.config/qtile/autostart.sh
+cp -f ~/Downloads/wm/config.py ~/.config/qtile/config.py
+rm ~/Downloads/wm/config.py
+mv ~/Downloads/wm/autostart.sh ~/.config/qtile/autostart.sh
 chmod +x autostart.sh
 
 #Wallpaper
-mv ~/wm/image.jpg ~/.config/qtile/image.jpg
+mv ~/Downloads/wm/image.jpg ~/.config/qtile/image.jpg
 
 #Delete wm folder
-rm -r ~/wm/
+rm -r ~/Downloads/wm/
 
 echo 'INSTALLATION COMPLETED ! You can now reboot'
