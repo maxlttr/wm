@@ -120,16 +120,18 @@ for vt in range(1, 8):
         )
     )
 
-groups = [Group(name = "1", label = "", layout='monadtall'),
-          Group(name = "2", label = "", layout='monadtall'),
-          Group(name = "3", label = "", layout='monadtall'),
-          Group(name = "4", label = "", layout='monadtall'),
-          Group(name = "5", label = "", layout='monadtall'),
-          Group(name = "6", label = "", layout='monadtall'),
-          Group(name = "7", label = "", layout='monadtall'),
-          Group(name = "8", label = "", layout='monadtall'),
-          Group(name = "9", label = "", layout='monadtall'),
-          Group(name = "10", label = "", layout='monadtall')]
+groups = [
+    Group(name = "1", label = "", layout='monadtall'),
+    Group(name = "2", label = "", layout='monadtall'),
+    Group(name = "3", label = "", layout='monadtall'),
+    Group(name = "4", label = "", layout='monadtall'),
+    #Group(name = "5", label = "", layout='monadtall'),
+    #Group(name = "6", label = "", layout='monadtall'),
+    #Group(name = "7", label = "", layout='monadtall'),
+    #Group(name = "8", label = "", layout='monadtall'),
+    #Group(name = "9", label = "", layout='monadtall'),
+    #Group(name = "10", label = "", layout='monadtall')
+]
 
 layouts = [
     # layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
