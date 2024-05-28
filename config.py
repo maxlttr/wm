@@ -134,19 +134,7 @@ groups = [
 ]
 
 layouts = [
-    # layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
-    # layout.Max(),
-    # Try more layouts by unleashing below layouts.
-    # layout.Stack(num_stacks=2),
-    # layout.Bsp(),
-    # layout.Matrix(),
     layout.MonadTall(border_focus="cc99ff", border_width=5, margin=15),
-    # layout.MonadWide(),
-    # layout.RatioTile(),
-    # layout.Tile(),
-    # layout.TreeTab(),
-    # layout.VerticalTile(),
-    # layout.Zoomy(),
 ]
 
 widget_defaults = dict(
@@ -157,15 +145,9 @@ widget_defaults = dict(
 extension_defaults = widget_defaults.copy()
 
 screen_principal = [
-    Screen(
-        top=bar.Gap(26),
-        wallpaper='~/.config/qtile/image.jpg',
-        wallpaper_mode='stretch',
-    ),
-    Screen(
-        wallpaper='~/.config/qtile/image.jpg',
-        wallpaper_mode='stretch',
-    )   
+    Screen(top=bar.Gap(26), 
+           wallpaper='~/.config/qtile/image.jpg',
+           wallpaper_mode='stretch')
 ]
    
 # Drag floating layouts.
