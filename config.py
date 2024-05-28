@@ -163,12 +163,7 @@ screen_principal = [
         wallpaper_mode='stretch',
     ),
 ]
-screen_presentation = [
-    Screen(
-        wallpaper='~/.config/qtile/image.jpg',
-        wallpaper_mode='stretch',
-    ),
-    
+   
 # Drag floating layouts.
 mouse = [
     Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
