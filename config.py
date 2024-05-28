@@ -162,6 +162,10 @@ screen_principal = [
         wallpaper='~/.config/qtile/image.jpg',
         wallpaper_mode='stretch',
     ),
+    Screen(
+        wallpaper='~/.config/qtile/image.jpg',
+        wallpaper_mode='stretch',
+    )   
 ]
    
 # Drag floating layouts.
