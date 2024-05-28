@@ -14,5 +14,5 @@ cp -i ~/wm/autostart.sh ~/.config/qtile/autostart.sh
 #Wallpaper
 cp -i ~/wm/image.jpg ~/.config/qtile/image.jpg
 #Clean useless file and folder
-rm -r ~/wm/ && rm installer.sh
+#rm -r ~/wm/ && rm installer.sh
 reboot
