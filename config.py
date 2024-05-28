@@ -100,6 +100,7 @@ keys = [
     Key([mod, "shift"], "agrave", lazy.window.togroup("10", switch_group=True), desc="switch window to workspace 10"),
     #Custom
     Key([mod], "b", lazy.spawn("firefox")),
+    Key([mod], "r", lazy.spawn("rofi -show drun")),
     #Volume
     Key([mod], "F1", lazy.spawn('pactl set-sink-mute @DEFAULT_SINK@ toggle')),
     Key([mod], "F3", lazy.spawn('pactl set-sink-volume @DEFAULT_SINK@ +5%')),
