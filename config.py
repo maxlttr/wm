@@ -144,7 +144,7 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-screen_principal = [
+screens = [
     Screen(top=bar.Gap(26), 
            wallpaper='~/.config/qtile/image.jpg',
            wallpaper_mode='stretch')
