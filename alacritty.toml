@@ -1,0 +1,17 @@
+[window]
+padding = { x = 10, y = 10}
+opacity = 0.7
+
+[font]
+size = 7
+
+[colors.primary]
+background = "#000000"
+foreground = "#b160ff"
+
+[colors.normal]
+red = "#c98a68"
+grey = "#879171"
+blue = "#bef4ff"
+purple = "#d3a8b2"
+yellow = "#f6ef7c"
