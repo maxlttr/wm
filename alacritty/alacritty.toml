@@ -10,8 +10,8 @@ background = "#000000"
 foreground = "#b160ff"
 
 [colors.normal]
-red = "#c98a68"
-grey = "#879171"
-blue = "#bef4ff"
-purple = "#d3a8b2"
-yellow = "#f6ef7c"
+blue = "#91ddb6"
+pink = "##ffcbd3"
+yellow = "#f8e181"
+red = "#f45d42"
+purple = "#752d52"
