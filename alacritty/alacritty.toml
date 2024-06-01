@@ -1,9 +1,9 @@
 [window]
 padding = { x = 10, y = 10}
-opacity = 0.7
+opacity = 0.3
 
 [font]
-size = 7
+size = 10
 
 [colors.primary]
 background = "#000000"
