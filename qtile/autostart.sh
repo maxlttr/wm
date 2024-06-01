@@ -1,4 +1,4 @@
 #!/bin/sh
 polybar &
 sxhkd &
-nitrogen --restore &
+nitrogen --random ~/.config/wallpapers/ &
