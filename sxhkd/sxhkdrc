@@ -10,6 +10,12 @@ super + F2
 super + F3
     	pactl set-sink-volume @DEFAULT_SINK@ +5%
 
+super + F5
+	brightnessctl set -10%
+
+super + F6
+	brightnessctl set +10%
+
 super + Return
 	alacritty
 
