@@ -1,0 +1,18 @@
+super + b
+    firefox
+
+super + F1
+    	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+super + F2
+    	pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+super + F3
+    	pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+super + Return
+	alacritty
+
+super + r
+	rofi -show drun
+	
