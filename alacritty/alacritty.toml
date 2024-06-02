@@ -8,10 +8,3 @@ size = 10
 [colors.primary]
 background = "#000000"
 foreground = "#b160ff"
-
-[colors.normal]
-blue = "#91ddb6"
-pink = "##ffcbd3"
-yellow = "#f8e181"
-red = "#f45d42"
-purple = "#752d52"
