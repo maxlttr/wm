@@ -89,7 +89,7 @@ for i in range (len(groups)):
         ]
 )
 
-layouts = [layout.MonadTall(border_focus="cc99ff", border_width=5, margin=7)]
+layouts = [layout.MonadTall(border_focus="d2c7bd", border_width=5, margin=7)]
 
 screens = []
    
