@@ -130,7 +130,7 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-screens = [Screen(top=bar.Gap(26))]
+screens = [#Screen(top=bar.Gap(26))]
    
 # Drag floating layouts.
 mouse = [
