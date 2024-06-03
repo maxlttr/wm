@@ -98,13 +98,6 @@ keys = [
     Key([mod, "shift"], "underscore", lazy.window.togroup("8", switch_group=True), desc="switch window to workspace 8"),
     Key([mod, "shift"], "ccedilla", lazy.window.togroup("9", switch_group=True), desc="switch window to workspace 9"),
     Key([mod, "shift"], "agrave", lazy.window.togroup("10", switch_group=True), desc="switch window to workspace 10"),
-    #Custom
-    Key([mod], "b", lazy.spawn("firefox")),
-    Key([mod], "r", lazy.spawn("rofi -show drun")),
-    #Volume
-    Key([mod], "F1", lazy.spawn('pactl set-sink-mute @DEFAULT_SINK@ toggle')),
-    Key([mod], "F3", lazy.spawn('pactl set-sink-volume @DEFAULT_SINK@ +5%')),
-    Key([mod], "F2", lazy.spawn('pactl set-sink-volume @DEFAULT_SINK@ -5%')),
 ]
 
 # Add key bindings to switch VTs in Wayland.
@@ -126,16 +119,9 @@ groups = [
     Group(name = "3", label = "", layout='monadtall'),
     Group(name = "4", label = "", layout='monadtall'),
     Group(name = "5", label = "", layout='monadtall'),
-    #Group(name = "6", label = "", layout='monadtall'),
-    #Group(name = "7", label = "", layout='monadtall'),
-    #Group(name = "8", label = "", layout='monadtall'),
-    #Group(name = "9", label = "", layout='monadtall'),
-    #Group(name = "10", label = "", layout='monadtall')
 ]
 
-layouts = [
-    layout.MonadTall(border_focus="cc99ff", border_width=5, margin=15),
-]
+layouts = [layout.MonadTall(border_focus="cc99ff", border_width=5, margin=15)]
 
 widget_defaults = dict(
     font="sans",
@@ -144,11 +130,7 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-screens = [
-    Screen(top=bar.Gap(26), 
-           wallpaper='~/.config/qtile/wallpapers/image.jpg',
-           wallpaper_mode='stretch')
-]
+screens = [Screen(top=bar.Gap(26))]
    
 # Drag floating layouts.
 mouse = [
