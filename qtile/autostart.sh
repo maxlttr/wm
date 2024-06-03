@@ -1,4 +1,4 @@
 #!/bin/sh
 polybar &
 sxhkd &
-nitrogen --random ~/.config/wallpapers/ &
+nitrogen --set-zoom-fill --random ~/.config/wallpapers/ &
