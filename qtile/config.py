@@ -24,9 +24,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from libqtile import layout, qtile
+from libqtile import bar, layout, qtile, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
+from libqtile.utils import guess_terminal
 import os
 import subprocess
 from libqtile import hook
@@ -37,7 +38,7 @@ def autostart():
     subprocess.Popen([home])
 
 mod = "mod4"
-terminal = "alacritty"
+terminal = guess_terminal()
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -75,21 +76,59 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
-    ]
+    #Switch workspace
+    Key([mod], "ampersand", lazy.group["1"].toscreen(), desc="Call workspace 1 on screen"),
+    Key([mod], "eacute", lazy.group["2"].toscreen(), desc="Call workspace 2 on screen"),
+    Key([mod], "quotedbl", lazy.group["3"].toscreen(), desc="Call workspace 3 on screen"),
+    Key([mod], "apostrophe", lazy.group["4"].toscreen(), desc="Call workspace 4 on screen"),
+    Key([mod], "parenleft", lazy.group["5"].toscreen(), desc="Call workspace 5 on screen"),
+    Key([mod], "minus", lazy.group["6"].toscreen(), desc="Call workspace 6 on screen"),
+    Key([mod], "egrave", lazy.group["7"].toscreen(), desc="Call workspace 7 on screen"),
+    Key([mod], "underscore", lazy.group["8"].toscreen(), desc="Call workspace 8 on screen"),
+    Key([mod], "ccedilla", lazy.group["9"].toscreen(), desc="Call workspace 9 on screen"),
+    Key([mod], "agrave", lazy.group["10"].toscreen(), desc="Call workspace 10 on screen"),
+    #Move window
+    Key([mod, "shift"], "ampersand", lazy.window.togroup("1", switch_group=True), desc="switch window to workspace 1"),
+    Key([mod, "shift"], "eacute", lazy.window.togroup("2", switch_group=True), desc="switch window to workspace 2"),
+    Key([mod, "shift"], "quotedbl", lazy.window.togroup("3", switch_group=True), desc="switch window to workspace 3"),
+    Key([mod, "shift"], "apostrophe", lazy.window.togroup("4", switch_group=True), desc="switch window to workspace 4"),
+    Key([mod, "shift"], "parenleft", lazy.window.togroup("5", switch_group=True), desc="switch window to workspace 5"),
+    Key([mod, "shift"], "minus", lazy.window.togroup("6", switch_group=True), desc="switch window to workspace 6"),
+    Key([mod, "shift"], "egrave", lazy.window.togroup("7", switch_group=True), desc="switch window to workspace 7"),
+    Key([mod, "shift"], "underscore", lazy.window.togroup("8", switch_group=True), desc="switch window to workspace 8"),
+    Key([mod, "shift"], "ccedilla", lazy.window.togroup("9", switch_group=True), desc="switch window to workspace 9"),
+    Key([mod, "shift"], "agrave", lazy.window.togroup("10", switch_group=True), desc="switch window to workspace 10"),
+]
 
+# Add key bindings to switch VTs in Wayland.
+# We can't check qtile.core.name in default config as it is loaded before qtile is started
+# We therefore defer the check until the key binding is run by using .when(func=...)
+for vt in range(1, 8):
+    keys.append(
+        Key(
+            ["control", "mod1"],
+            f"f{vt}",
+            lazy.core.change_vt(vt).when(func=lambda: qtile.core.name == "wayland"),
+            desc=f"Switch to VT{vt}",
+        )
+    )
 
-groups = [Group(i) for i in "12345"]
+groups = [
+    Group(name = "1", label = "", layout='monadtall'),
+    Group(name = "2", label = "", layout='monadtall'),
+    Group(name = "3", label = "", layout='monadtall'),
+    Group(name = "4", label = "", layout='monadtall'),
+    Group(name = "5", label = "", layout='monadtall'),
+]
 
-groups_keys = ["ampersand", "eacute", "quotedbl", "apostrophe", "parenleft"]
+layouts = [layout.MonadTall(border_focus="d2c7bd", border_width=5, margin=15)]
 
-for i in range (len(groups)):
-    keys.extend([
-        Key([mod], groups_keys[i], lazy.group[i.name].toscreen()),
-        Key([mod, "shift"], groups_keys[i], lazy.window.togroup(i.name, switch_group=True)),
-        ]
+widget_defaults = dict(
+    font="sans",
+    fontsize=12,
+    padding=3,
 )
-
-layouts = [layout.MonadTall(border_focus="d2c7bd", border_width=5, margin=7)]
+extension_defaults = widget_defaults.copy()
 
 screens = []
    
