@@ -121,7 +121,7 @@ groups = [
     Group(name = "5", label = "", layout='monadtall'),
 ]
 
-layouts = [layout.MonadTall(margin=7)]
+layouts = [layout.MonadTall(border_width=0, margin=7)]
 
 widget_defaults = dict(
     font="sans",
