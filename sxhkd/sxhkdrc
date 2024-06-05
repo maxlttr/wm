@@ -21,4 +21,10 @@ super + Return
 
 super + r
 	rofi -show drun
+
+super + w
+	alacritty -e nmtui
+
+super + shift + w
+	nitrogen --set-zoom-fill --random ~/.config/wallpapers/	
 	
