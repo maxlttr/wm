@@ -1,5 +1,5 @@
 super + b
-    firefox
+    	firefox
 
 super + F1
     	pactl set-sink-mute @DEFAULT_SINK@ toggle
