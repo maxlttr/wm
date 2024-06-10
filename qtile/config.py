@@ -38,7 +38,7 @@ def autostart():
     subprocess.Popen([home])
 
 mod = "mod4"
-terminal = guess_terminal()
+terminal = "alacritty"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -68,14 +68,17 @@ keys = [
     # multiple stack panes
     Key([mod, "shift"], "Return", lazy.layout.toggle_split(), desc="Toggle between split and unsplit sides of stack"),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen on the focused window"),
+    Key([mod], "m", lazy.window.toggle_maximize()),
     Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+
     #Switch workspace
     Key([mod], "ampersand", lazy.group["1"].toscreen(), desc="Call workspace 1 on screen"),
     Key([mod], "eacute", lazy.group["2"].toscreen(), desc="Call workspace 2 on screen"),
@@ -87,6 +90,7 @@ keys = [
     Key([mod], "underscore", lazy.group["8"].toscreen(), desc="Call workspace 8 on screen"),
     Key([mod], "ccedilla", lazy.group["9"].toscreen(), desc="Call workspace 9 on screen"),
     Key([mod], "agrave", lazy.group["10"].toscreen(), desc="Call workspace 10 on screen"),
+
     #Move window
     Key([mod, "shift"], "ampersand", lazy.window.togroup("1", switch_group=True), desc="switch window to workspace 1"),
     Key([mod, "shift"], "eacute", lazy.window.togroup("2", switch_group=True), desc="switch window to workspace 2"),
@@ -100,35 +104,9 @@ keys = [
     Key([mod, "shift"], "agrave", lazy.window.togroup("10", switch_group=True), desc="switch window to workspace 10"),
 ]
 
-# Add key bindings to switch VTs in Wayland.
-# We can't check qtile.core.name in default config as it is loaded before qtile is started
-# We therefore defer the check until the key binding is run by using .when(func=...)
-for vt in range(1, 8):
-    keys.append(
-        Key(
-            ["control", "mod1"],
-            f"f{vt}",
-            lazy.core.change_vt(vt).when(func=lambda: qtile.core.name == "wayland"),
-            desc=f"Switch to VT{vt}",
-        )
-    )
-
-groups = [
-    Group(name = "1", label = "", layout='monadtall'),
-    Group(name = "2", label = "", layout='monadtall'),
-    Group(name = "3", label = "", layout='monadtall'),
-    Group(name = "4", label = "", layout='monadtall'),
-    Group(name = "5", label = "", layout='monadtall'),
-]
+groups = [Group(i) for i in "12345"]
 
 layouts = [layout.MonadTall(border_width=0, margin=10)]
-
-widget_defaults = dict(
-    font="sans",
-    fontsize=12,
-    padding=3,
-)
-extension_defaults = widget_defaults.copy()
 
 screens = []
    
