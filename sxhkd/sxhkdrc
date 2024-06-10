@@ -19,7 +19,7 @@ super + F6
 super + Return
 	alacritty
 
-super + r
+super + shift + r
 	rofi -show drun
 
 super + w
