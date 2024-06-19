@@ -27,4 +27,7 @@ super + w
 
 super + shift + w
 	nitrogen --set-zoom-fill --random ~/.config/wallpapers/	
+
+super + shift + f
+	dolphin
 	
